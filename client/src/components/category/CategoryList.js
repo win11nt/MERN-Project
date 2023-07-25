@@ -14,8 +14,7 @@ const CategoryList = () => {
     });
   }, []);
 
-  const showCategories = () =>
-    categories.map((c) => (
+  const showCategories = () => { categories && categories.map && categories.map((c) => (
       <div
         key={c._id}
         className="col btn btn-outlined-primary btn-lg btn-block btn-raised m-3"
@@ -23,6 +22,7 @@ const CategoryList = () => {
         <Link to={`/category/${c.slug}`}>{c.name}</Link>
       </div>
     ));
+  }
 
   return (
     <div className="container">
